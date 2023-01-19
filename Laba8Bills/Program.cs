@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -7,23 +6,6 @@ using System.Linq;
 
 namespace Laba8Bills
 {
-    public class TransfersData
-    {
-        public int Time { get; set; }
-        public int Money { get; set; }
-        public string Operation { get; set; }
-        public string DateOfVerification { get; set; }
-    }
-    class TimeComparer : IComparer
-    {
-        public int Compare(object x, object y)
-        {
-            var TransfersData1 = (TransfersData)x;
-            var TransfersData2 = (TransfersData)y;
-            return TransfersData1.Time.CompareTo(TransfersData2.Time);
-        }
-    }
-
     class Program
     {   
         static List<TransfersData> ListOfTransfers = new List<TransfersData>();
